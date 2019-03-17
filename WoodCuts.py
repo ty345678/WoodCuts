@@ -1,3 +1,8 @@
+#HACKPSU spring 2019
+#Tyler Mueller
+#taran 
+#Betsy
+
 import tkinter as tk
 from getWoocCuts import getWoodCuts
 from SetBoards import SetBoards
@@ -79,11 +84,11 @@ class window(tk.Frame):
 
 
     def createBOARDButtons(self,PosX,name,lengthVar,amountVar,board):
-        #self.canvas.create_rectangle(PosX, 15, (PosX+65), 200, image=self.woodImage)
-        self.canvasWood = tk.Canvas(self.master,image = self.woodImage)
+        self.canvas.create_image((PosX+32), 100,image=self.woodImage)
+        self.Wood = tk.Label(self.master,image=self.woodImage)
 
         #self.label = tk.Label(self.master,text = "2x4").place(x=25,y=50)
-        self.canvas.create_text((PosX+30),50,fill="black",font="Times 15 bold",text=name)
+        self.canvas.create_text((PosX+30),75,fill="white",font="Times 20 bold",text=name)
                
         self.canvas.create_text((PosX+32),212,fill="black",font="Times 10 bold",text="Length")
         self.textBox = tk.Entry(self.master, textvariable=lengthVar,justify="center").place(x=(PosX+12),y=222,height=30, width=40)

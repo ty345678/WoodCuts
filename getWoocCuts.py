@@ -36,7 +36,8 @@ def getWoodCuts(board,overCutPercent):
                 if((secBoard)<=(size-overCutPercent)):
                     if((secBoard)>secBoardMax):
                         secBoardMax = secBoard#checkboard
-
+                if(totalBoard>size):
+                    totalBoard = totalBoard
             try:            
                 lengths.remove(secBoardMax-totalBoard)                
                 boardSets.append(secBoardMax-totalBoard)
