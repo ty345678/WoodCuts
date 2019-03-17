@@ -84,7 +84,7 @@ class window(tk.Frame):
 
 
     def createBOARDButtons(self,PosX,name,lengthVar,amountVar,board):
-        self.canvas.create_image((PosX+32), 100,image=self.woodImage)
+        self.canvas.create_image((PosX+32),100, image=self.woodImage)
         self.Wood = tk.Label(self.master,image=self.woodImage)
 
         #self.label = tk.Label(self.master,text = "2x4").place(x=25,y=50)
@@ -98,7 +98,7 @@ class window(tk.Frame):
         self.textBox = tk.Entry(self.master, textvariable=amountVar ,justify="center").place(x=(PosX+12),y=277,height=30, width=40)
         self.canvas.create_rectangle((PosX+5), 260, (PosX+60), 312)
 
-        self.button = tk.Button(self.master, text="TEST", command=lambda: self.setLength(lengthVar,amountVar,board)).place(x=(PosX+12), y=320)
+        self.button = tk.Button(self.master, text="ADD", command=lambda: self.setLength(lengthVar,amountVar,board)).place(x=(PosX+12), y=320)
      
     def createSETBoard(self):
         self.typeSet = tk.StringVar()
